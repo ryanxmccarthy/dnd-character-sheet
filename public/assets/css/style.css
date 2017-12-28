@@ -1,0 +1,63 @@
+body{
+	background-color:#f8e1ac;
+	background-image:url('../images/vintage-concrete.png');
+	background-repeat: repeat;
+}
+
+.navbar-brand>img{
+	margin-top:-15px;
+}
+
+.panel, .panel-body, .thumbnail, .panel-default>.panel-heading{
+	background-color:#f8e1ac;
+	border-color:#e8c98e;
+}
+
+.form-control, .form-control.active, select.active.open, option{
+	background-color:#FFF3C7;
+}
+
+select.form-control:not([size]):not([multiple]){
+	height:35px;
+}
+
+h1{
+	font-family:"Fondamento", cursive;
+	font-size:3.789em;
+}
+
+h2{
+	font-family:"Fondamento", cursive;
+	font-size:2.842;
+}
+
+h3, h4, h5, .panel-heading, .panel-body, .list-group-item>h3{
+	font-family: 'Julius Sans One', sans-serif;
+	font-size:2.132em;
+}
+
+.readable, p, .form-control{
+	font-family: 'Alegreya', serif;
+	font-size:1.6em;
+}
+
+#diceSize{
+	font-size:16px;
+}
+
+.btn{
+	font-family: 'Julius Sans One', sans-serif;
+	background-color:#FFF3C7;
+}
+
+.profile{
+	margin-top:71px;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover{
+	color:#f8e1ac;
+}
+
+#diceRoll{
+	margin-top:10px;
+}

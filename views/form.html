@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Djinn</title>
+
+  <meta charset="UTF-8">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Custom CSS -->
+
+  <link rel="stylesheet" href="/assets/css/custom-css-bootstrap-magic-2017-12-12.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Aladin|Alegreya|Amatic+SC|Astloch|Berkshire+Swash|Bungee|Caesar+Dressing|Fondamento|Germania+One|Julius+Sans+One|Metal+Mania|Pirata+One|Spectral+SC|UnifrakturMaguntia" rel="stylesheet">
+
+
+  <script type="text/javascript" src="/js/ajax.js"></script>
+
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+
+  <!-- Nav Bar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="/"><img alt="Brand" src="/assets/images/genie-lamp.svg" style="height: 50px; width:50px;"></a>
+
+      </div>
+  </nav>
+
+  <!-- Profile -->
+  <div class="row profile">
+
+    <!-- Picture, Name, Lvl/Class -->
+    <div class="col-lg-4">
+      <div class="thumbnail">
+
+        <img src="/assets/images/characterCreate.jpg">
+
+        <div class="caption">
+          <h3>Name</h3></label>
+            <input type="text" class="form-control" id='name'>
+          <h3>Level</h3></label>
+            <input type="text" class="form-control" id='level'>
+          <div class="form-group">
+            <h3 class="class">Class</h3>
+            <select name="class" class="form-control" id="class">
+              <option value="barbarian">Barbarian</option>
+              <option value="bard">Bard</option>
+              <option value="cleric">Cleric</option>
+              <option value="druid">Druid</option>
+              <option value="fighter">Fighter</option>
+              <option value="monk">Monk</option>
+              <option value="paladin">Paladin</option>
+              <option value="ranger">Ranger</option>
+              <option value="rogue">Rogue</option>
+              <option value="sorcerer">Sorcerer</option>
+              <option value="wizard">Wizard</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- middle column -->
+    <div class="col-lg-4">
+      <ul class="list-group">
+        <li class="list-group-item">
+          <div class="form-group form-inline">
+            <label><h3 class="class">Race</h3></label>
+            <select name="class" class="form-control" id="race">
+                <option value="dragonborn">Dragonborn</option>
+                <option value="dwarf">Dwarf</option>
+                <option value="elf">Elf</option>
+                <option value="gnome">Gnome</option>
+                <option value="half-elf">Half-Elf</option>
+                <option value="half-orc">Half-Orc</option>
+                <option value="halfling">Halfling</option>
+                <option value="human">Human</option>
+              </select>
+          </div>
+        </li>
+
+        <li class="list-group-item">
+          <div class="form-group form-inline">
+          <label><h3 class="class">Background</h3></label>
+          <input type="text" class="form-control" id='background'>
+          </div>
+        </li>
+
+        <li class="list-group-item">
+          <div class="form-group form-inline">
+            <label><h3 class="class">Alignment</h3></label> 
+            <select class="form-control" name="alignment" id="alignment">
+                <option value="lg">Lawful Good</option>
+                <option value="ng">Neutral Good</option>
+                <option value="cg">Chaotic Good</option>
+                <option value="ln">Lawful Neutral</option>
+                <option value="tn">True Neutral</option>
+                <option value="cn">Chaotic Neutral</option>
+                <option value="le">Lawful Evil</option>
+                <option value="ne">Neutral Evil</option>
+                <option value="ce">Chaotic Evil</option>
+              </select>
+            </div>
+        </li>
+
+        <li class="list-group-item">
+          <h3 class="class">Armor Class</h3> 
+          <input type="number" class="form-control" id="armorClass">
+        </li>
+        <li class="list-group-item">
+          <h3 class="class">XP Points</h3> 
+          <input type="number" class="form-control" id='xp'>
+        </li>
+      </ul>
+
+        <!-- Str/Dex/Int/Wis/Con/Cha Boxes or Progress Bars-->
+      <div class="row">
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              Strength 
+              <input type="number" class="form-control" id='str'>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              Dexterity 
+              <input type="number" class="form-control" id='dex'>
+            </div>
+          </div>
+        </div> 
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              Intelligence 
+              <input type="number" class="form-control" id='int'>
+            </div>
+          </div>
+        </div> 
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              Wisdom 
+              <input type="number" class="form-control" id='wis'>
+            </div>
+          </div>
+        </div> 
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              Constitution 
+              <input type="number" class="form-control" id='con'>
+            </div>
+          </div>
+        </div> 
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              Charisma 
+              <input type="number" class="form-control" id='cha'>
+            </div>
+          </div>
+        </div> 
+      </div>
+
+      <!-- Background Panel -->
+      <div class="panel panel-default">
+        <div class="form-group">
+          <label><h3>Background Story<h3></label>
+          <textarea name="physical" class="form-control" id="story" cols="245" rows="10"></textarea>
+        </div>
+      </div>
+    </div> <!-- middle column -->
+
+    <div class="col-lg-4">
+
+      <div class="panel panel-default">
+        <div class="form-group">
+          <label><h3>Physical Description</h3></label>
+          <textarea name="physical" class="form-control" id="physical" cols="117" rows="10"></textarea>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="form-group">
+          <label><h3>Personality Description</h3></label>
+          <textarea name="physical" class="form-control" id="personality" cols="117" rows="10"></textarea>
+        </div>
+      </div>
+
+      <!-- Dice -->
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="form-group">
+            Dice Type
+            <select class="form-control" id="diceSize">
+              <option value="d4">d4</option>
+              <option value="d6">d6</option>
+              <option value="d9">d8</option>
+              <option value="d10">d10</option>
+              <option value="d12">d12</option>
+              <option value="d20">d20</option>
+              <option value="perc">%</option>
+            </select>
+            Number of Dice
+            <input type="number" class="form-control" id='diceNum'>
+            <input value="Roll" type="submit" class="btn btn-default" id='diceRoll'></input>
+            <span id="diceRes"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <input value="Create" type="submit" class="btn btn-default" id='submit'></input>
+    </div>
+  </div> <!-- profile row -->
+</div>
+
+</body>
+</html>

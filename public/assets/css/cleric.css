@@ -1,0 +1,19 @@
+h1, h2, h3{
+	font-family:"Pirata One", cursive;
+}
+
+h4, h5, .panel-heading, .panel-body, .list-group-item{
+	font-family: 'Julius Sans One', sans-serif;
+}
+
+.readable, p{
+	font-family: 'Alegreya', serif;
+}
+
+body{
+	background-image:url('../images/intersection.png');
+}
+
+.profile{
+	margin-top:71px;
+}

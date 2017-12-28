@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Djinn</title>
+
+  <meta charset="UTF-8">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Custom CSS -->
+
+  <link rel="stylesheet" href="/assets/css/custom-css-bootstrap-magic-2017-12-12.css">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <link rel="stylesheet" id="barbarian" disabled="true" href="/assets/css/barbarian.css">
+  <link rel="stylesheet" id="bard" disabled="true" href="/assets/css/bard.css">
+  <link rel="stylesheet" id="cleric" disabled="true" href="/assets/css/cleric.css">
+  <link rel="stylesheet" id="druid" disabled="true" href="/assets/css/druid.css">
+  <link rel="stylesheet" id="fighter" disabled="true" href="/assets/css/fighter.css">
+  <link rel="stylesheet" id="monk" disabled="true" href="/assets/css/monk.css">
+  <link rel="stylesheet" id="paladin" disabled="true" href="/assets/css/paladin.css">
+  <link rel="stylesheet" id="ranger" disabled="true" href="/assets/css/ranger.css">
+  <link rel="stylesheet" id="rogue" disabled="true" href="/assets/css/rogue.css">
+  <link rel="stylesheet" id="sorcerer" disabled="true" href="/assets/css/sorcerer.css">
+  <link rel="stylesheet" id="wizard" disabled="true" href="/assets/css/wizard.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Aguafina+Script|Aladin|Alegreya|Amatic+SC|Astloch|Berkshire+Swash|Bungee|Caesar+Dressing|Fondamento|Germania+One|Julius+Sans+One|Metal+Mania|Pirata+One|Spectral+SC|UnifrakturMaguntia" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+ <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="../js/clientCharacter.js"></script>
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+
+  <!-- Nav Bar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="/"><img alt="Brand" src="/assets/images/genie-lamp.svg" style="height: 50px; width:50px;"></a>
+
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/form">Create New Character</a></li>
+          <!-- <li><a href="#">Edit This Character</a></li> -->
+          <li><a href="#">Print This Character</a></li>
+          <li><a href="#" id="delete">Delete This Character</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <!-- Profile -->
+  <div class="row profile">
+
+    <!-- Picture, Name, Lvl/Class -->
+    <div class="col-lg-4">
+      <div class="thumbnail">
+        <img id="profileImg" src="../assets/images/druid.jpg">
+        <div class="caption">
+          <form id="characterFrom">
+          <h1 class="name"> <span id='name'></span></h1>
+          <h3 class="lvl-class"> <span id='level'>Lvl 1</span> <span id="class"></span> </h3>
+        </div>
+      </div>
+    </div>
+    
+      <!-- Profile Info -->
+    <div class="col-lg-4">
+      <ul class="list-group">
+        <li class="list-group-item"><h3>Race: <span id='race'></span></h3></li>
+        <li class="list-group-item"><h3>Background: <span id='background'></span></h3></li>
+        <li class="list-group-item"><h3>Alignment: <span id='alignment'></span></h3></li>
+        <li class="list-group-item"><h3>Armor Class: <span id='armor'></span></h3></li>
+        <li class="list-group-item"><h3>XP Points: <span id='xp'></span></h3></li>
+      </ul>
+
+      <!-- Str/Dex/Int/Wis/Con/Cha Boxes or Progress Bars--> 
+      <div class="row">
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-body">Str: <span id='str'></span></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-body">Dex: <span id='dex'></span></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-body">Int: <span id='int'></span></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-body">Wis: <span id='wis'></span></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-body">Con: <span id='con'></span></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-body">Cha: <span id='char'></span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">Background Story</div>
+            <div class="panel-body readable" id='story'>Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn. 'bthnk lw'nafh throd Hastur stell'bsna 'ai, Cthulhu f'hupadgh Azathoth y-uh'e tharanakor hlirgh f'Hastur uln phlegeth. Zhro h'hupadgh ya fhtagn lw'nafh orr'e llll ng'fhalma ehye f'llll vulgtm, syha'h ftaghu R'lyeh fm'latgh nw llll n'gha kn'a Cthulhu. 'fhalma 'bthnk throd shtunggli mg lloig f'syha'h ron, nnngoka ngzhro sgn'wahl ebunma y-Cthulhu ebunma vulgtlagln, gotha vulgtm R'lyeh n'gha sgn'wahlagl nnnAzathoth. Hastur athg hafh'drn ngR'lyeh ah 'fhalmaoth ehye 'ai fm'latgh, 'ai wgah'n hrii uh'e wgah'n h'Nyarlathotep zhro s'uhn, k'yarnak nnnch' hupadgh ngCthulhu li'hee cehye vulgtm. Cthulhu sll'ha f'Dagon grah'n fhtagn ep n'gha hlirgh fhtagn f's'uhn chtenff 'fhalma ph'Tsathoggua ftaghu, zhro naCthulhu y-gnaiih hlirgh ooboshu lloigor R'lyehyar wgah'n hafh'drn shagg vulgtlagln.
+            <br><br>
+            'fhalma hai athg ep fhtagn tharanak athgyar cfhtagn lloig phlegeth throd nglui ftaghu shogg ch' naflya, gof'nn Chaugnar Faugnoth ngllll s'uhn fhtagn gotha uaaah hrii ah syha'h shugg llll 'bthnk. Shub-Niggurath n'ghft nggeb gof'nn Shub-Niggurath ph'fhtagn wgah'noth shugg hafh'drn hai vulgtm, stell'bsna athg shagg stell'bsna ehye 'bthnkog hrii phlegeth ron Tsathoggua Hastur, lloig ron ftaghunyth chtenff k'yarnak mnahn' goka ph'ep lloigyar. Uln f'athg ng'ai fm'latgh geb li'hee nnns'uhn ph'k'yarnak orr'eoth, ebunma athg phlegeth shtunggli ph'vulgtm naflR'lyeh ep nnnnglui ron, phlegeth fm'latghoth wgah'n stell'bsna vulgtlagln ph'ebunma s'uhn. Ftaghu 'ai fhtagn y-sgn'wahl bug vulgtlagln y-uaaah orr'e bug ngvulgtm nilgh'ri, chtenff h'ah Shub-Niggurath vulgtm ya stell'bsna athg naflgotha hai 'ai Azathoth, s'uhn Nyarlathotep lloig naflHastur fhtagn f'gnaiih llll y-mg grah'n. </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- Personality & Physical Description Panels -->
+    <div class="col-lg-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">Physical Description</div>
+        <div class="panel-body readable" id='physical'>Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn. 'bthnk lw'nafh throd Hastur stell'bsna 'ai, Cthulhu f'hupadgh Azathoth y-uh'e tharanakor hlirgh f'Hastur uln phlegeth. Zhro h'hupadgh ya fhtagn lw'nafh orr'e llll ng'fhalma ehye f'llll vulgtm, syha'h ftaghu R'lyeh fm'latgh nw llll n'gha kn'a Cthulhu. 'fhalma 'bthnk throd shtunggli mg lloig f'syha'h ron, nnngoka ngzhro sgn'wahl ebunma y-Cthulhu ebunma vulgtlagln, gotha vulgtm R'lyeh n'gha sgn'wahlagl nnnAzathoth. Hastur athg hafh'drn ngR'lyeh ah 'fhalmaoth ehye 'ai fm'latgh, 'ai wgah'n hrii uh'e wgah'n h'Nyarlathotep zhro s'uhn, k'yarnak nnnch' hupadgh ngCthulhu li'hee cehye vulgtm. Cthulhu sll'ha f'Dagon grah'n fhtagn ep n'gha hlirgh fhtagn f's'uhn chtenff 'fhalma ph'Tsathoggua ftaghu, zhro naCthulhu y-gnaiih hlirgh ooboshu lloigor R'lyehyar wgah'n hafh'drn shagg vulgtlagln. </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">Personality Description</div>
+        <div class="panel-body readable" id='personality'>Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn. 'bthnk lw'nafh throd Hastur stell'bsna 'ai, Cthulhu f'hupadgh Azathoth y-uh'e tharanakor hlirgh f'Hastur uln phlegeth. Zhro h'hupadgh ya fhtagn lw'nafh orr'e llll ng'fhalma ehye f'llll vulgtm, syha'h ftaghu R'lyeh fm'latgh nw llll n'gha kn'a Cthulhu. 'fhalma 'bthnk throd shtunggli mg lloig f'syha'h ron, nnngoka ngzhro sgn'wahl ebunma y-Cthulhu ebunma vulgtlagln, gotha vulgtm R'lyeh n'gha sgn'wahlagl nnnAzathoth. Hastur athg hafh'drn ngR'lyeh ah 'fhalmaoth ehye 'ai fm'latgh, 'ai wgah'n hrii uh'e wgah'n h'Nyarlathotep zhro s'uhn, k'yarnak nnnch' hupadgh ngCthulhu li'hee cehye vulgtm. Cthulhu sll'ha f'Dagon grah'n fhtagn ep n'gha hlirgh fhtagn f's'uhn chtenff 'fhalma ph'Tsathoggua ftaghu, zhro naCthulhu y-gnaiih hlirgh ooboshu lloigor R'lyehyar wgah'n hafh'drn shagg vulgtlagln. </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
